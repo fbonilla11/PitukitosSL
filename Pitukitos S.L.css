@@ -1,0 +1,126 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+header img{
+    width: 10%;
+}
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+section h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-size: 4.5em;
+    font-family:Custom;
+}
+section h2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-size: 2.75em;
+    font-family:Custom;
+}
+form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+form button{
+    margin-left: 4em;
+    width:8em;
+    height:3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+.imgdescripcion{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+.caracteristicas{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+figure{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+figure img{
+    display: flex;
+    width: 33%;
+    justify-content: center;
+}
+figcaption{
+    color: white;
+    width: 100%;
+}
+figcaption h3,figcaption p{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+@font-face {
+    font-family:'Custom';
+    src: url("fonts/Pixels.ttf");
+}
+.boton{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 8em;
+    height: 3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+
+@media (max-width: 900px){
+
+    header img{
+        width: 25%;
+    }
+
+    section h1{
+        font-size: 3.75em;
+        width: 70%;
+    }
+
+    section h2{
+        font-size: 2.25em;
+        width: 70%;
+    }
+    form input{
+        width: 90%;
+    }
+    form button{
+        width: 30%;
+    }
+
+    figure{
+        margin-left: 0em;
+    }
+
+    .caracteristicas{
+        flex-direction: column;
+    }
+    .descripcion2{
+        width: 100%;
+    }
+
+}
