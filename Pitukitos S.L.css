@@ -120,6 +120,9 @@ form input:focus{
     width: 61%;
     margin-left: 125px;
 }
+#contraseñacoincide, #textoContraseña, #textocorreo{
+    width: 100%;
+}
 figure{
     display: flex;
     justify-content: center;
