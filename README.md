@@ -1,2 +1,2 @@
 # PitukitosSL
-Repositorio de la empresa Pitukitos
+CARACTERÍSTICAS DEL FORMULARIO
