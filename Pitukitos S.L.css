@@ -14,7 +14,7 @@ header img{
 }
 section{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     flex-wrap: wrap;    
 }
 section h1{
@@ -30,28 +30,81 @@ section h2{
     justify-content: center;
     width: 100%;
     color: white;
-    font-size: 2.75em;
+    font-size: 3em;
     font-family:Custom;
 }
 form{
-    display: flex;
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column ;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
 }
 form button{
-    margin-left: 4em;
+    margin: 4em;
+    margin-left: 250px;
     width:8em;
     height:3em;
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
-.imgdescripcion{
+
+form button:hover{
+    margin: 4em;
+    margin-left: 250px;
+    width:12em;
+    height:4.5em;
+    transition: 1.5s;
+    transform:rotate(0deg);
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+
+input{
+    border: none;
+}
+
+#nombre,#apellidos,#contraseña,#contraseña2{
+    height: 1.5em;
+    background-color: white;
+    width: 60%;
+    margin: 2.5px;
+    margin-left: 125px;
+}
+
+input:focus{
+    background-color: lightblue;
+    border: solid;
+    transform: rotatex(10deg);
+}
+
+#hombre,#mujer,form p{
+    width: 10%;
+    margin-left: 125px;
+}
+#email,#fecha{
+    height: 1.5em;
+    margin: 2.5px;
+    margin-left: 125px;
+    width: 60%;
+}
+#notificaciones{
+    margin: 5px;
+    margin-left: 125px;
+    width: 10%;
+}
+#direccion{
+    height: 1.5em;
+    margin-left: 125px;
+    width: 60%;
+}
+#imgdescripcion{
     display: flex;
     justify-content: center;
     width: 75%;
     margin-top: 5em;
     margin-bottom: 5em;
 }
-.caracteristicas{
+#caracteristicas{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -81,7 +134,8 @@ figcaption h3,figcaption p{
     font-family:'Custom';
     src: url("fonts/Pixels.ttf");
 }
-.boton{
+#boton{
+    margin: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -90,37 +144,42 @@ figcaption h3,figcaption p{
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
-@media (max-width: 900px){
+#enviarFormulario{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 8em;
+    height: 3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+#textocorreo,#contraseñacoincide,#textoContraseña{
+    display: none;
+    color:blue;
+}
+#sexo{
+    color: black;
+}
+@media (max-width: 832px){
 
     header img{
-        width: 25%;
+        width: 20%;
     }
 
     section h1{
         font-size: 3.75em;
-        width: 70%;
     }
 
     section h2{
         font-size: 2.25em;
-        width: 70%;
-    }
-    form input{
-        width: 90%;
-    }
-    form button{
-        width: 30%;
     }
 
     figure{
         margin-left: 0em;
     }
 
-    .caracteristicas{
+    #caracteristicas{
         flex-direction: column;
-    }
-    .descripcion2{
-        width: 100%;
     }
 
 }
