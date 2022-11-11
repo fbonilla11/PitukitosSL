@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitukitos S.L</title>
     <link rel="stylesheet" href="Pitukitos S.L.css">
-    <link rel="icon" href="imgs/Logo3.png">
+    <link rel="icon" href="imgs/Logo2.png">
 </head>
 <body>
     <header>
@@ -16,10 +16,32 @@
     <section>
         <h1 class="titulo">Estate atento a tus videojuegos preferidos</h1>
         <h2 class="descripcion">En esta pagina encontraras las ultimas noticias, reviews, especificaciones<br> de tus videojuegos preferidos y MUCHO MAS</h2>
-        <form action="" method="get">
-            <input type="text" size="50"  maxlength="50" placeholder="Direccion de Email"><button>Suscribete</button>
+        <form action="">
+            <h1>¡REGISTRATE AHORA!</h1>
+            <input type="text" class="nombre" size="20"  maxlength="50" placeholder="Nombre" required>
+            <input type="text" class="apellidos" size="20"  maxlength="50" placeholder="Apellidos"required><br>
+            <input type="text" class="email" size="20"  maxlength="50" placeholder="Direccion de Correo"required><br>
+            <input type="password" class="contraseña" size="20"  maxlength="50" placeholder="Contraseña"required>
+            <input type="password" class="contraseña2" size="20"  maxlength="50" placeholder="Confirmar Contraseña"required><br>
+
+            <p>Sexo</p>
+            <input type="radio" class="hombre" name="sexo" value="hombre">
+                <label for="hombre">Hombre</label><br>
+            <input type="radio" class="mujer" name="sexo" value="mujer">
+                <label for="mujer">Mujer</label><br>
+
+            <input type="date" class="fecha" name="Fecha de Nacimiento" id="fecha"><br>
+            <input type="text" class="direccion" size="20"  maxlength="50" placeholder="Direccion"><br>
+
+            <input type="checkbox" class="notificaciones" name="notificaciones" value="Si">
+                <label for="notificaciones">Activar notificaciones</label><br>
+            <input type="checkbox" class="notificaciones" name="revista" value="Si">
+                <label for="revista">Recepción de la revista digital</label><br>
+    
+            <button class="EnviarFormulario">Enviar</button>
         </form>
-        <img class="imgdescripcion" src="imgs/fondo.png" alt="">
+        <img class="imgdescripcion" src="imgs/fondo.png" alt=""><!--Aqui iria una imagen general de la pagina-->
+        <!--Carrusel de imagen en nuestro caso vamos a meter 3-->
          <h3></h3>
          <div class="caracteristicas">
             <figure>
@@ -45,6 +67,7 @@
             </figure>     
         </div>
         <form action="" method="get">
+            <!--Aqui iria el mismo formulario del principio para que no tengan que subir para registrarse-->
             <input type="text" size="50"  maxlength="50" placeholder="Direccion de Email"><button>Suscribete</button>
         </form>
         <h2 class="descripcion2">Si te apetece estar al tanto de todo, puedes suscribirte<br>a nuestro Newsletter o entrar en la pagina principal</h2>
