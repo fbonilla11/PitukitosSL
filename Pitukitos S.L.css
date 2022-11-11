@@ -14,7 +14,7 @@ header img{
 }
 section{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     flex-wrap: wrap;    
 }
 section h1{
@@ -34,15 +34,61 @@ section h2{
     font-family:Custom;
 }
 form{
-    display: flex;
+    border: solid;
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column ;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
 }
 form button{
-    margin-left: 4em;
+    margin: 4em;
+    margin-left: 250px;
     width:8em;
     height:3em;
     background:linear-gradient(180deg,purple,CYAN,blue);
+}
+
+form button:hover{
+    margin: 4em;
+    margin-left: 250px;
+    width:12em;
+    height:4.5em;
+    transition: 1.5s;
+    transform:rotate(0deg);
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+
+.nombre,.apellidos,.contraseña,.contraseña2{
+    
+    background-color: white;
+    width: 60%;
+    margin: 2.5px;
+    margin-left: 125px;
+}
+
+.nombre,.apellidos,.contraseña,.contraseña2:focus{
+    background-color: lightblue;
+}
+
+.hombre,.mujer,form p{
+    width: 10%;
+    margin-left: 125px;
+}
+.email,.fecha{
+    margin: 2.5px;
+    margin-left: 125px;
+    width: 60%;
+}
+.notificaciones{
+    margin: 5px;
+    margin-left: 125px;
+    width: 10%;
+}
+.direccion{
+    margin-left: 125px;
+    width: 60%;
 }
 .imgdescripcion{
     display: flex;
@@ -82,6 +128,7 @@ figcaption h3,figcaption p{
     src: url("fonts/Pixels.ttf");
 }
 .boton{
+    margin: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -90,26 +137,28 @@ figcaption h3,figcaption p{
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
-@media (max-width: 900px){
+.enviarFormulario{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 8em;
+    height: 3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+
+@media (max-width: 832px){
 
     header img{
-        width: 25%;
+        width: 20%;
     }
 
     section h1{
         font-size: 3.75em;
-        width: 70%;
     }
 
     section h2{
         font-size: 2.25em;
-        width: 70%;
-    }
-    form input{
-        width: 90%;
-    }
-    form button{
-        width: 30%;
     }
 
     figure{
@@ -118,9 +167,6 @@ figcaption h3,figcaption p{
 
     .caracteristicas{
         flex-direction: column;
-    }
-    .descripcion2{
-        width: 100%;
     }
 
 }
