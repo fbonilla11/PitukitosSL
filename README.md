@@ -8,4 +8,8 @@ Se nos pedía tambien una tarjeta de credito aunque decidimos no ponerlo debido 
 Además se pedían unas ciertas restricciones las cuales son las siguientes:
 
   - Nombre, apellido, corrreo electrónico, contraseña y comfirmar contraseña sean obligatorios.
-  - Sexo, dirección y país
+  - Sexo, dirección y país sean opcionales.
+  - El activar notificaciones de la pagina y recepción de la revista digital sena casillas de verificación.
+  - El nombre y apellidos tengan solo dos palabras.
+  - La contraseña tenga al menos ocho caracteres, al menos una letra minúscula, una mayúscula, un número y un símbolo.
+  - El país debe de ser un selector.
