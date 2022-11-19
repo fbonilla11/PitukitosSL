@@ -34,16 +34,14 @@ section h2{
     font-family:Custom;
 }
 form{
-    display: block;
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: column ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
 form button{
-    margin: 4em;
-    margin-left: 250px;
     width:8em;
     height:3em;
     background:linear-gradient(180deg,purple,CYAN,blue);
@@ -63,47 +61,80 @@ form button:hover{
     width:12em;
     height:4.5em;
     transition: 1.5s;
-    transform:rotate(0deg);
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
-input{
-    border: none;
+#nombre,#apellidos,#contraseña,#contraseña2{
+    margin-bottom: 1em;
+    height: 1.5em;
+    width: 70%;
 }
 
-#nombre,#apellidos,#contraseña,#contraseña2{
+#email,#fecha{
     height: 1.5em;
-    width: 60%;
-    margin: 2.5px;
-    margin-left: 125px;
+    width: 70%;
 }
 
 form input:focus{
     background-color: lightblue;
     border: solid;
+    height: 3em;
     transform: rotatex(10deg);
 }
 
-#hombre,#mujer,form p{
-    width: 10%;
-    margin-left: 125px;
+#divSexo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#email,#fecha{
-    height: 1.5em;
-    margin: 2.5px;
-    margin-left: 125px;
-    width: 60%;
+
+#sexo{
+    font-size: 2em;
+    font-family: Impact;
 }
+
+#elegirSexo{
+    display: flex;
+    flex-direction: row;
+}
+
+#divHombre{
+    display: flex;
+    margin-right: 5em;
+}
+
+#divMujer{
+    display: flex;
+}
+
+#hombre,#mujer{
+    width: 15%;
+}
+
+#checkbox{
+    margin-bottom: 1em;
+}
+
+#divNotificaciones{
+    display: flex;
+    flex-direction: row;
+}
+
+#divRevista{
+    display: flex;
+    flex-direction: row;
+}
+
 #notificaciones{
-    margin: 5px;
-    margin-left: 125px;
-    width: 10%;
+    width: 7%;
+    margin-right: 1em;
 }
+
 #direccion{
     height: 1.5em;
-    margin-left: 125px;
-    width: 60%;
+    width: 70%;
 }
+
 #imgdescripcion{
     display: flex;
     justify-content: center;
@@ -111,43 +142,51 @@ form input:focus{
     margin-top: 5em;
     margin-bottom: 5em;
 }
+
 #caracteristicas{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 #paises{
-    width: 61%;
-    margin-left: 125px;
+    width: 71%;
 }
+
 #contraseñacoincide, #textoContraseña, #textocorreo{
     width: 100%;
 }
+
 figure{
     display: flex;
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
 }
+
 figure img{
     display: flex;
     width: 33%;
     justify-content: center;
 }
+
 figcaption{
     color: white;
     width: 100%;
 }
+
 figcaption h3,figcaption p{
     color: white;
     display: flex;
     justify-content: center;
     width: 100%;
 }
+
 @font-face {
     font-family:'Custom';
     src: url("fonts/Pixels.ttf");
 }
+
 #boton{
     margin: 20px;
     justify-content: center;
@@ -167,13 +206,16 @@ figcaption h3,figcaption p{
     height: 3em;
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
+
 #textocorreo,#contraseñacoincide,#textoContraseña{
     display: none;
     color:blue;
 }
+
 #sexo{
     color: black;
 }
+
 @media (max-width: 832px){
 
     header img{
