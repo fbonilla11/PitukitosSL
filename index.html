@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pitukitos S.L</title>
     <link rel="stylesheet" href="Pitukitos S.L.css">
-    <link rel="icon" href="imgs/Logo2.png">
+    <link rel="icon" href="imgs/grafik Presentacion.png">
 </head>
 <body>
     <header>
-        <img class="logo"src="imgs/Logo3.png" alt="Logo">
+        <img class="logo"src="imgs/grafik.png" alt="Logo">
     </header>
     
     <section>
@@ -20,17 +20,25 @@
         <form action="">
             <h1>¡REGISTRATE AHORA!</h1>
             <input type="text" id="nombre" size="20"  maxlength="50" placeholder="Nombre" required>
-            <input type="text" id="apellidos" size="20"  maxlength="50" placeholder="Apellidos"required><br>
+            <input type="text" id="apellidos" size="20"  maxlength="50" placeholder="Apellidos"required>
             <input onblur="comprobarcorreo()" type="text" id="email" size="20"  maxlength="50" placeholder="Direccion de Correo"required><br>
             <p id="textocorreo"></p>
             <input type="password" id="contraseña" size="20"  maxlength="50" placeholder="Contraseña"required>
             <input onblur="comprobarcontraseña()" type="password" id="contraseña2" size="20"  maxlength="50" placeholder="Confirmar Contraseña"required><br>
+            <button type="button" id="mostrarContraseña" onclick="mostrarContraseña()">Mostrar Contraseña</button>
             <p id="contraseñacoincide"></p>
             <p id="textoContraseña"></p><br>
-            <p id="sexo">Sexo</p>
-            <input type="radio" id="hombre" name="sexo" value="hombre">Hombre
-            <br><input type="radio" id="mujer" name="sexo" value="mujer">Mujer<br>
+
+            <div id="divSexo">
+                <p id="sexo">Sexo:</p>
+                <div id="elegirSexo">
+                    <div id="divHombre"><input type="radio" id="hombre" name="sexo" value="hombre"><p>Hombre</p></div>
+                    <div id="divMujer"><input type="radio" id="mujer" name="sexo" value="mujer"><p>Mujer</p></div>
+                </div>
+                
             <br>
+            </div>
+
             <input type="date" id="fecha" name="Fecha de Nacimiento" id="fecha"><br>
             <input type="text" id="direccion" size="20"  maxlength="50" placeholder="Domicilio"><br><br>
             <select name="pais" id="paises">
@@ -274,15 +282,19 @@
                 <option value="Zimbabue" id="ZW">Zimbabue</option>
             </select><br>
 
-            <input type="checkbox" id="notificaciones" name="notificaciones" value="Si">
-                <label for="notificaciones">Activar notificaciones</label><br>
-            <input type="checkbox" id="notificaciones" name="revista" value="Si">
-                <label for="revista">Recepción de la revista digital</label><br>
+            <div id="checkbox">
+                <div id="divNotificaciones">
+                    <input type="checkbox" id="notificaciones" name="notificaciones" value="Si"><p>Activar notificaciones</p>
+                </div>
+                <div id="divRevista">
+                    <input type="checkbox" id="notificaciones" name="revista" value="Si"><p>Recepción de la revista digital</p>
+                </div>
+                
+            </div>
     
             <button id="EnviarFormulario">Enviar</button>
         </form>
-        <img id="imgdescripcion" src="imgs/fondo.png" alt=""><!--Aqui iria una imagen general de la pagina-->
-        <!--Carrusel de imagen en nuestro caso vamos a meter 3-->
+        <img id="imgdescripcion" src="imgs/fondo.png" alt="">
          <h3></h3>
          <div id="caracteristicas">
             <figure>
@@ -308,7 +320,7 @@
             </figure>     
         </div>
         <h2 id="descripcion2">Si te apetece estar al tanto de todo, puedes suscribirte<br>a nuestro Newsletter o entrar en la pagina principal</h2>
-        <button id="boton">Inicio</button>
+        <button id="inicio">Inicio</button>
     </section>
 
     <script src="js/javascript.js"></script>
