@@ -41,9 +41,32 @@ form{
     justify-content: center;
     width: 50%;
 }
-form button{
-    width:8em;
+
+#mostrarContraseña{
+    width:11em;
     height:3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+    border-radius: 1em;
+}
+
+#mostrarContraseña:hover{
+    width:13.5em;
+    height:4.5em;
+    transition: 1.5s;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+}
+
+#EnviarFormulario{
+    width:5em;
+    height:3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+    border-radius: 1em;
+}
+
+#EnviarFormulario:hover{
+    width:8em;
+    height:4.5em;
+    transition: 1.5s;
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
@@ -52,15 +75,6 @@ form button{
     margin-left: 350px;
     width:8em;
     height:3em;
-    background:linear-gradient(180deg,purple,CYAN,blue);
-}
-
-form button:hover{
-    margin: 4em;
-    margin-left: 250px;
-    width:12em;
-    height:4.5em;
-    transition: 1.5s;
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
@@ -187,13 +201,21 @@ figcaption h3,figcaption p{
     src: url("fonts/Pixels.ttf");
 }
 
-#boton{
+#inicio{
     margin: 20px;
     justify-content: center;
     align-items: center;
     display: flex;
     width: 8em;
     height: 3em;
+    background:linear-gradient(180deg,purple,CYAN,blue);
+    border-radius: 1em;
+}
+
+#inicio:hover{
+    width:13.5em;
+    height:4.5em;
+    transition: 1.5s;
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
