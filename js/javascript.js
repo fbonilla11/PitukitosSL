@@ -1,3 +1,6 @@
+var formulario;
+formulario=document.getElementById("formulario");
+
 function comprobarcorreo(){
     var correo;
     correo=document.getElementById("email").value;
@@ -29,6 +32,24 @@ function comprobarcontraseña(){
     }
 
 }
+
+function mostrarContraseña(){
+    var mostrarContraseña, mostrarRepetirContraseña;
+    mostrarContraseña=document.getElementById("contraseña");
+    mostrarRepetirContraseña=document.getElementById("contraseña2");
+
+    if(mostrarContraseña.type==="password" && mostrarRepetirContraseña.type==="password"){
+        mostrarContraseña.type="text";
+        mostrarRepetirContraseña.type="text";
+    }else{
+        mostrarContraseña.type="password";
+        mostrarRepetirContraseña.type="password";
+    }
+
+}
+
+formulario.addEventListener('submit', (e)=> {e.preventDefault()})
+
 
 /*function comprobartarjeta(){
     var direccion,pais;
