@@ -10,24 +10,24 @@
 </head>
 <body>
     <header>
-        <img class="logo"src="imgs/grafik.png" alt="Logo">
+        <img class="logo" src="imgs/grafik.png" alt="Logo">
     </header>
     
     <section>
         <h1 id="titulo">Estate atento a tus videojuegos preferidos</h1>
         <h2 id="descripcion">En esta pagina encontraras las ultimas noticias, reviews, especificaciones<br> de tus videojuegos preferidos y MUCHO MAS</h2>
         
-        <form action="">
+        <form name="formulario" action="">
             <h1>¡REGISTRATE AHORA!</h1>
             <input type="text" id="nombre" size="20"  maxlength="50" placeholder="Nombre" required>
-            <input type="text" id="apellidos" size="20"  maxlength="50" placeholder="Apellidos"required>
+            <input type="text" id="apellidos" size="20"  maxlength="50" placeholder="Apellidos" required>
             <input onblur="comprobarcorreo()" type="text" id="email" size="20"  maxlength="50" placeholder="Direccion de Correo"required><br>
             <p id="textocorreo"></p>
-            <input type="password" id="contraseña" size="20"  maxlength="50" placeholder="Contraseña"required>
+            <input type="password" id="contraseña" size="20"  maxlength="50" placeholder="Contraseña" required>
             <input onblur="comprobarcontraseña()" type="password" id="contraseña2" size="20"  maxlength="50" placeholder="Confirmar Contraseña"required><br>
             <button type="button" class="mostrarContraseña" onclick="mostrarContraseña()">Mostrar Contraseña</button>
             <p id="contraseñacoincide"></p>
-            <p id="textoContraseña"></p><br>
+            <p id="textoContraseña"></p>
 
             <div id="divSexo">
                 <p id="sexo">Sexo:</p>
@@ -40,7 +40,7 @@
             </div>
 
             <input type="date" id="fecha" name="Fecha de Nacimiento" id="fecha"><br>
-            <input type="text" id="direccion" size="20"  maxlength="50" placeholder="Domicilio"><br><br>
+            <input type="text" id="direccion" size="20"  maxlength="50" placeholder="Domicilio"><br>
             <select name="pais" id="paises">
                 <option disabled selected value="predeterminado" id="predeterminado">Elige un País</option>
                 <option value="Afganistán" id="AF">Afganistán</option>
