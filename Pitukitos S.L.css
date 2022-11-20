@@ -35,7 +35,7 @@ section h2{
 }
 
 #logo{
-    width: 25%;
+    width: 20%;
 }
 
 form{
@@ -259,6 +259,10 @@ figcaption h3,figcaption p{
 
     section h2{
         font-size: 2.25em;
+    }
+
+    #logo{
+        width: 40%;
     }
 
     figure{
