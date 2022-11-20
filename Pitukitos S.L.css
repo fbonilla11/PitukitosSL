@@ -47,12 +47,12 @@ form{
     height:3em;
     background:linear-gradient(180deg,purple,CYAN,blue);
     border-radius: 1em;
+    transition: 1.5s;
 }
 
 .mostrarContraseña:hover{
     width:13.5em;
     height:4.5em;
-    transition: 1.5s;
     background:linear-gradient(180deg,purple,CYAN,blue);
 }
 
@@ -202,7 +202,7 @@ figcaption h3,figcaption p{
 }
 
 #inicio{
-    margin: 20px;
+    margin:5em;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -213,7 +213,7 @@ figcaption h3,figcaption p{
 }
 
 #inicio:hover{
-    width:13.5em;
+    width:10em;
     height:4.5em;
     transition: 1.5s;
     background:linear-gradient(180deg,purple,CYAN,blue);
