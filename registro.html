@@ -11,7 +11,7 @@
   <body>
     <div class="container">
         <div class="form">
-            <div class="row ">
+            <div class="row">
                 <div class="col-3 input-box">
                     <input type="text" required>
                     <span>Nombre</span>
@@ -67,11 +67,11 @@
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioMujer" value="mujer">
-                        <label class="form-check-label" for="inlineRadio2">Mujer</label>
+                        <label class="form-check-label" for="inlineRadio2"><span>Mujer</span></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioSinGenero" value="--">
-                        <label class="form-check-label" for="inlineRadio2">Prefiero no decirlo</label>
+                        <label class="form-check-label" for="inlineRadio2"> <span>Prefiero no decirlo</span></label>
                     </div>
                 </div>
 
@@ -80,11 +80,11 @@
 
             <div class="row">
                 <div class="input-box">
-                    <input type="date" required  style="font-size:medium; color: black;">
+                    <input type="date" required  style="font-size:medium;">
                     <i></i>
                 </div>
                 
-                <div class="input-box col-6">
+                <div class="input-box">
                     <select name="pais" class="form-control">
                         <option disabled selected value="">Selecciona tu país</option>
                         <option value="AF">Afghanistan</option>
@@ -325,11 +325,29 @@
                 </div>
             </div>
 
-            <div class="input-box">
-                <input type="text" required>
-                <span>Número de tarjeta de crédito</span>
-                <i></i>
-            </div>            
+            <div class="row justify-content-between col-12">
+
+                <div class="input-box col-6" style="display: none;">
+                    <input type="text" required>
+                    <span>Número de tarjeta de crédito</span>
+                    <i></i>
+                </div>
+                
+                <div class="col-6">
+                    <div class="form-check form-check-inline justify-content-around">
+                        <input class="form-check-input" type="checkbox" name="notificaciones" id="notificaciones" value="siNotif">
+                        <label class="form-check-label" for="inlineRadio1"> <span> Activar notificaciones</span> </label>
+                </div>
+                <div class="form-check form-check-inline justify-content-around">
+                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="radioMujer" value="mujer">
+                    <label class="form-check-label" for="inlineRadio2"><span> Recibir revista digital</span></label>
+                </div>
+            </div>
+        </div>
+
+
+            
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
