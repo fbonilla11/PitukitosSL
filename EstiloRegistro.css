@@ -13,13 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(45deg, #2196f3, #ff4685);
+  background: rgb(44, 44, 46);
 }
 
 .form {
   position: relative;
-  padding: 50px;
-  background: #fff;
+  padding: 30px;
+  background: rgb(78, 75, 75);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,8 +30,9 @@
 }
 
 .input-box {
+    margin: 5px;
   position: relative;
-  width: 350px;
+  width: 260px;
 }
 
 .input-box input {
@@ -42,7 +43,7 @@
   border-radius: 6px;
   outline: none;
   background: transparent;
-  color: #fff;
+  color: white;
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
   z-index: 2;
@@ -56,7 +57,7 @@
   pointer-events: none;
   font-size: 1rem;
   letter-spacing: 0.05rem;
-  color: #333;
+  color: white;
   transition: 0.5s;
 }
 
@@ -91,4 +92,18 @@
     justify-content: space-around;
     border: solid;
     border-color: linear-gradient(45deg, #2196f3, #ff4685) ;
+}
+
+#divSexo i{
+    position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background: linear-gradient(45deg, #2196f3, #ff4685);
+}
+
+span{
+    color: white;
 }
