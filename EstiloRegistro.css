@@ -88,6 +88,14 @@
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
+.label{
+  color: white;
+}
+
+.opcion{
+  color: white;
+}
+
 #radio{
     display: flex;
     justify-content: space-around;
