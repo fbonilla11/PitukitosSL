@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid red;
   background: rgb(44, 44, 46);
 }
 
@@ -140,4 +141,8 @@ input[type="checkbox"]:checked::before {
 
 input[type="checkbox"]:checked {
   background: #00ed64;
+}
+
+h1{
+  border: white;
 }
