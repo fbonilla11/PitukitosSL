@@ -7,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+  background: rgb(44, 44, 46);
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -116,6 +120,9 @@ span{
     background: linear-gradient(45deg, #2196f3, #ff4685);
     border: none;
     position: relative;
+    margin-top: 1em;
+    width: 75%;
+    border-radius: 0.5em;
 }
 
 #botonEnviar:hover {
