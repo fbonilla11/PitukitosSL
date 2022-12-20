@@ -87,14 +87,6 @@
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.label{
-  color: white;
-}
-
-.opcion{
-  color: white;
-}
-
 #radio{
     display: flex;
     justify-content: space-around;
@@ -116,40 +108,18 @@ span{
     color: white;
 }
 
-input[type="checkbox"] {
-  position: relative;
-  width: 40px;
-  height: 22px;
-  -webkit-appearance: none;
-  appearance: none;
-  background: red;
-  outline: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
+#botonEnviar{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: linear-gradient(45deg, #2196f3, #ff4685);
+    border: none;
+    position: relative;
 }
 
-input[type="checkbox"]::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-}
-
-input[type="checkbox"]:checked::before {
-  transform: translateX(100%);
-  background: #fff;
-}
-
-input[type="checkbox"]:checked {
-  background: #00ed64;
-}
-
-h1{
-  border: white;
+#botonEnviar:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
 }
