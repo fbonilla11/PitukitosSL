@@ -9,6 +9,9 @@
 
 body{
   background: rgb(44, 44, 46);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container {
@@ -22,7 +25,7 @@ body{
 
 .form {
   position: relative;
-  padding: 30px;
+  padding: 70px;
   background: rgb(78, 75, 75);
   display: flex;
   flex-direction: column;
@@ -89,6 +92,30 @@ body{
   height: 100%;
   border-radius: 6px;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.notificaciones{
+  margin-bottom: 0.5em;
+}
+
+.registrarse a{
+  text-decoration: none;
+  color: white;
+  margin-bottom: 16em;
+}
+
+
+.registrarse{
+  margin-bottom: -4em;
+}
+
+.img{
+  border: solid red;
+  width: 20%;
+}
+
+.imagen{
+  width: 100%;
 }
 
 #radio{
