@@ -8,7 +8,7 @@
 }
 
 body{
-  background-image: url("../PitukitosSL/imgs/background.png");
+  background-image: url("../Grafik-Formulario-de-registro/imgs/background.png");
 }
 
 .container {
@@ -17,7 +17,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../PitukitosSL/imgs/background.png");
+  flex-direction: column;
 }
 
 .form {
@@ -31,10 +31,11 @@ body{
   gap: 25px;
   border-radius: 8px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  /*margin-bottom: 15em;*/
 }
 
 .input-box {
-    margin: 5px;
+  margin: 5px;
   position: relative;
   width: 260px;
 }
@@ -136,4 +137,99 @@ span{
   justify-content: center;
   background-color: grey;
   color: white;
+}
+
+.imagenGrafik1{
+  display: flex;
+  justify-content: center;
+  margin-top: -10em;
+}
+
+.imagenGrafik2{
+  display: none;
+  justify-content: center;
+}
+
+#imagenGrafikGames1{
+  width: 50%;
+}
+
+#imagenGrafikGames2{
+  width: 50%;
+}
+
+.checkboxgrande{
+  width: 50%;
+}
+
+@media(max-width: 768px){
+
+  .imagenGrafik2{
+    display: none;
+  }
+
+  #imagenGrafikGames1{
+    width: 70%;
+  }
+
+  .form{
+    flex-direction: column;
+  }
+
+  .form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  input{
+    border: solid red;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input-box{
+    width: 100%;
+  }
+
+  .pais{
+    margin-top: 2em;
+  }
+
+  .checkboxgrande{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    
+  }
+
+  .checkboxpequeñonotificaciones{
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+  }
+
+  .checkboxpequeñorevista{
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+  }
+
+  .notificacionessi{
+    margin-left: 10000em;
+  }
+  
+  .labelcheckbox{
+    margin-left: 1em;
+  }
 }
