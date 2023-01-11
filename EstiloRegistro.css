@@ -22,7 +22,7 @@ body{
 
 .form {
   position: relative;
-  padding: 30px;
+  padding: 50px;
   background: rgb(78, 75, 75);
   display: flex;
   flex-direction: column;
