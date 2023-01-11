@@ -129,10 +129,6 @@ span{
     transition: all 0.2s ease;
 }
 
-#formulario{
-  margin-top: 5em;
-}
-
 #eslogan{
   border: solid;
   width: 50%;
@@ -155,8 +151,6 @@ span{
 }
 
 #imagenGrafikGames1{
-  margin-top: 5em;
-  margin-bottom: -5em;
   width: 50%;
 }
 
