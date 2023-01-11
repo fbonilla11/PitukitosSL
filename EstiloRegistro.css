@@ -8,7 +8,7 @@
 }
 
 body{
-  background-image: url("imgs/background.png");
+  background-image: url("../Grafik-Formulario-de-registro/imgs/background.png");
 }
 
 .container {
@@ -31,7 +31,7 @@ body{
   gap: 25px;
   border-radius: 8px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  margin-bottom: 15em;
+  /*margin-bottom: 15em;*/
 }
 
 .input-box {
