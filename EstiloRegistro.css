@@ -22,7 +22,7 @@ body{
 
 .form {
   position: relative;
-  padding: 50px;
+  padding: 30px;
   background: rgb(78, 75, 75);
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ body{
   gap: 25px;
   border-radius: 8px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-  /*margin-bottom: 15em;*/
+  margin-bottom: 15em;
 }
 
 .input-box {
@@ -129,6 +129,10 @@ span{
     transition: all 0.2s ease;
 }
 
+#formulario{
+  margin-top: 5em;
+}
+
 #eslogan{
   border: solid;
   width: 50%;
@@ -151,6 +155,8 @@ span{
 }
 
 #imagenGrafikGames1{
+  margin-top: 5em;
+  margin-bottom: -5em;
   width: 50%;
 }
 
