@@ -53,6 +53,17 @@ body{
   z-index: 2;
   cursor: pointer;
 }
+.slogan{
+  color: white;
+  text-align: center;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: -100px;
+}
+.logo{
+  width: 100%;
+}
 
 .input-box span {
   position: absolute;
