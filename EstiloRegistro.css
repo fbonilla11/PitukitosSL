@@ -8,7 +8,7 @@
 }
 
 body{
-  background-image: url("imgs/background.png");
+  background-image: url("../Grafik-Formulario-de-registro/imgs/background.png");
 }
 
 .container {
@@ -120,6 +120,7 @@ span{
     padding: 0.5em 1.2em;
     background: linear-gradient(45deg, #2196f3, #ff4685);
     border: none;
+    border-radius: 0.5em;
     position: relative;
 }
 
@@ -160,6 +161,20 @@ span{
 
 .checkboxgrande{
   width: 50%;
+}
+
+.contenido{
+  margin-top: 20em;
+}
+
+.contenidoBotonHomePage{
+  /*border: solid red;*/
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10em;
+  min-height: 75em;
 }
 
 @media(max-width: 768px){
