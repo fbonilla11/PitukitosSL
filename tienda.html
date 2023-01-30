@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grafik Games</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/demo.css">
+    <style>
+        body{
+          background-image: url(imgs/background.png);
+        }
+        h2,h4{
+          color: white;
+          text-align: center;
+        }
+        a{
+          color: white;
+        }
+        .img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width:3em;
+        }
+        #cuenta{
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 20px;
+          font-weight: 500;
+          padding: 0.5em 1.2em;
+          background-color: rgba(0, 0, 255, 0);
+          border: none;
+          position: relative;
+        }
+
+        #cuenta:hover {
+          color: rgba(255, 255, 255, 1);
+          transition: all 0.2s ease;
+        }
+        a{
+          color: white;
+          text-decoration: none;
+        }
+        a:hover{
+          color: white;
+        }
+        .modal-header,.modal-body,.modal-footer{
+            background-image: url("imgs/background.png");
+        }
+        .textomodal,.cart-container{
+            color: white;
+        }
+        .bg-cyan,.btn-cyan{
+            background-color: cyan;
+        }
+        .bg-purple,.btn-purple{
+            background-color: rgb(255, 0, 255);
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-3">
+
+
+        <div class="row  align-items-center"><!--header-->
+            <div class="col col-lg-2 d-none d-md-block"> <img src="imgs/logoGrafikGames (1).png" alt=""></div><!--logo-->
+
+            <div class="col col-lg-8 text-center"><img src="imgs/GrafikLetras.png" alt=""></div><!--Nombre-->
+            <div class="col col-lg-2 text-center">
+                <figure class="figure">
+                  <a href="Login.html"><img src="imgs/Login.png" class="figure-img img-fluid rounded"></a>
+                    <figcaption class="figure-caption"><button id="cuenta"><a href="Login.html">Login</a></button></figcaption>
+                  </figure>
+            </div><!--Login en algun momento-->
+        </div>
+        <div class="row"><!--Navegador-->
+            
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="home.html">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Link</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Desplegable
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a href="#" class="dropdown-item">Link 1</a></li>
+                            <li><a href="#" class="dropdown-item">Link 2</a></li>
+                            <li><a href="#" class="dropdown-item">Link 3</a></li>
+                        </ul>
+                      </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input type="text" class="form-control me-2 w-auto" placeholder="Busqueda">
+                    <button type="submit" class="btn btn-outline-success">Buscar</button>
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#carrito" aria-expanded="false" aria-controls="collapseExample">
+                        <img src="imgs/shopping-cart.png" alt="">
+                        <span class="badge text-bg-primary" id="cartitems">0</span>
+                    </button>
+                </form>
+                </div>
+              </nav>
+        </div>
+
+        <div class="collapse" id="carrito"><!--Carrito-->
+        <div class="row border-top">
+            <div class="col mt-5">
+                <div class="cart-container d-flex flex-column">
+                    <h2>Carrito</h2>
+                    <table>
+                      <thead>
+                        <tr>
+                        <th><strong>Producto</strong></th>
+                        <th><strong>Precio</strong></th>
+                      </tr>
+                      </thead>
+                      <tbody id="carttable">
+                      </tbody>
+                    </table>
+                    <hr>
+                    <table id="carttotals">
+                      <tr>
+                        <td><strong>Productos</strong></td>
+                        <td><strong>Total</strong></td>
+                      </tr>
+                      <tr>
+                        <td>x <span id="itemsquantity">0</span></td>
+                       
+                        <td><span id="total">0</span>€</td>
+                      </tr></table>
+            
+                      
+                    <div class="cart-buttons d-flex justify-content-center">  
+                      <button id="emptycart" class="btn bg-purple">Vaciar Carrito</button>
+                      <button id="checkout"  class="btn bg-cyan">Pagar</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        <div class="row border-top mt-5"><!--Cuerpo de la pagina-->
+        <div id="alerts" style="color: white;"></div>
+        <div class="col-6 col-lg-3 mt-5">
+                <div class="product card bg-black" style="color: white;">
+                    <img class="rounded-2"
+                        src="imgs/mw2card.jpg" alt="">
+                    <div class="card-body">
+                        <h3 class="productname">Modern Warfare II</h3>
+                        <p class="card-text">En Call of Duty®: Modern Warfare® II, los jugadores se verán inmersos en un
+                            conflicto a escala global sin precedentes que incluye el regreso de Operadores icónicos de la fuerza
+                            operativa 141.</p>
+                        <p class="price">70€</p>
+                        <button type="button" class="btn btn-purple h-100" data-bs-toggle="modal" data-bs-target="#mimodal">Ver mas</button>
+                        <button class="addtocart btn btn-cyan h-100">Comprar</button>
+                        <!--MODAL-->
+                        <div class="modal fade" id="mimodal">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <!--Cabezera del dialogo-->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Cabecera</h4>
+                                        <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+        
+                                    <!--Cuerpo del dialogo-->
+                                    <div class="modal-body">
+                                        <p class="textomodal">Te damos la bienvenida a la nueva era de Call of Duty®.
+        
+                                            En Call of Duty®: Modern Warfare® II, los jugadores se verán inmersos en un
+                                            conflicto a escala global sin precedentes que incluye el regreso de Operadores
+                                            icónicos de la fuerza operativa 141. Desde operaciones tácticas de infiltración a
+                                            pequeña escala hasta misiones altamente secretas, los jugadores se desplegarán con
+                                            amigos en una experiencia inmersiva.
+        
+                                            Infinity Ward ofrece a los fans una experiencia puntera con un manejo nuevo, un
+                                            sistema de IA avanzado, un armero nuevo y una retahíla de innovaciones gráficas y de
+                                            jugabilidad que elevarán la franquicia a otro nivel.
+        
+                                            Modern Warfare® II cuenta con una campaña mundial de un jugador, un combate
+                                            Multijugador envolvente y un modo de juego evolucionado de Operaciones Especiales
+                                            tácticas y cooperativas.
+        
+                                            También obtienes acceso la nueva experiencia Battle Royale de Call of Duty®:
+                                            Warzone™ 2.0.</p>
+                                    </div>
+        
+                                    <!--Pie del dialogo-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-6 col-lg-3 mt-5">
+            <div class="product card bg-black" style="color: white;">
+                <img class="rounded-2" src="imgs/rdr2card.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="productname">Red Dead Redemption II</h3>
+                    <p class="card-text">Red Dead Redemption 2 es la épica historia de Arthur Morgan y la banda de Van der Linde, que huyen por toda América en el albor de una nueva era. También incluye acceso al mundo multijugador</p>
+                    <p class="price">20€</p>
+                    <button type="button" class="btn btn-purple h-100" data-bs-toggle="modal" data-bs-target="#mimodal2">Ver mas</button>
+                    <button class="addtocart btn btn-cyan h-100">Comprar</button>
+                    <!--MODAL-->
+                    <div class="modal fade" id="mimodal2">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <!--Cabezera del dialogo-->
+                                    <div class="modal-header">
+                                    <h4 class="modal-title">Cabecera</h4>
+                                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+    
+                                <!--Cuerpo del dialogo-->
+                                    <div class="modal-body">
+                                        <p>América, 1899.
+
+                                            Arthur Morgan y la banda de Van der Linde son forajidos en busca y captura. Mientras los agentes federales y los mejores cazarrecompensas de la nación les pisan los talones, la banda deberá abrirse camino por el abrupto territorio del corazón de América y sobrevivir a base de robos y peleas. Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.
+                                            
+                                            Con contenido adicional para el Modo Historia y un completo modo Foto, Red Dead Redemption 2 también incluye acceso gratuito al mundo multijugador compartido de Red Dead Online, en el que los jugadores asumen diversos roles para ganarse la vida a su manera en la frontera mientras persiguen a fugitivos buscados como cazarrecompensas, crean un negocio como comerciantes, descubren exóticos tesoros como coleccionistas, dirigen una destilería ilegal como licoristas y muchas cosas más.
+                                            
+                                            Gracias a las nuevas mejoras gráficas y técnicas que permiten una mayor inmersión en el juego, Red Dead Redemption 2 para PC aprovecha al máximo la potencia de los equipos para conseguir que todos y cada uno de los aspectos de este gigantesco mundo lleno de detalles cobren vida. Incluye mayores distancias de dibujado; iluminación global y oclusión ambiental de mayor calidad, para mejorar la luz tanto de día como de noche; reflejos mejorados y sombras más profundas y de mayor resolución a todas las distancias; texturas de árboles teseladas y texturas de hierba y pelaje mejoradas para aumentar el realismo de las plantas y animales.
+                                            
+                                            Red Dead Redemption 2 para PC también ofrece compatibilidad con HDR, la posibilidad de utilizar pantallas de alta gama (con resoluciones 4K y superiores), configuraciones con varios monitores, con pantalla panorámica, mayores tasas de fotogramas, etc.</p>
+                                    </div>
+    
+                                <!--Pie del dialogo-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3 mt-5">
+
+            <div class="product card bg-black" style="color: white;">
+                <img class="rounded-2" src="imgs/nfscard.jpg" alt="">
+
+                <div class="card-body">
+                    <h3 class="productname">Need For Speed: Unbound</h3>
+                    <p class="card-text">Corre hasta lo más alto, sin llevarte chascos. Supera a la policía y participa en las eliminatorias semanales del Grand, la carrera callejera definitiva. Llena tu garaje de coches personalizados</p>
+                    <p class="price">70€</p>
+                    <button type="button" class="btn btn-purple h-100" data-bs-toggle="modal" data-bs-target="#mimodal3">Ver mas</button>
+                    <button class="addtocart btn btn-cyan h-100">Comprar</button>
+                    </div>
+                    <!--MODAL-->
+                    <div class="modal fade" id="mimodal3">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <!--Cabezera del dialogo-->
+                                    <div class="modal-header">
+                                    <h4 class="modal-title">Cabecera</h4>
+                                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+    
+                                <!--Cuerpo del dialogo-->
+                                    <div class="modal-body">
+                                        <p>El mundo es tu lienzo en Need for Speed™ Unbound. Demuestra que tienes lo que hay que tener para ganar el Grand, el desafío de carreras callejeras definitivo de Lakeshore. A lo largo de 4 semanas de carreras intensas, gana el dinero suficiente para participar en las eliminatorias semanales, supera a tus rivales y deja huella en el mundillo de las carreras callejeras mientras le das un repaso a la policía. Llena tu garaje de coches personalizados y tuneados con precisión e inunda las calles con tu estilo único, atuendos exclusivos y una potente banda sonora mundial que resonará en todas partes gracias a A$AP Rocky y AWGE. Exprésate al máximo con las últimas corrientes artísticas y los grafitis característicos que muestran de qué rollo vas. Con campañas individuales y multijugador separadas, esta última edición de la franquicia de Need for Speed de Criterion Games™ ofrece horas y horas de acción llenas de adrenalina.
+                                        </p>
+                                    </div>
+    
+                                <!--Pie del dialogo-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col-6 col-lg-3 mt-5">
+
+            <div class="product card bg-black" style="color: white;">
+                <img class="rounded-2" src="imgs/hpcard.jpg" alt="">
+
+                <div class="card-body">
+                    <h3 class="productname">Hogwarts Legacy</h3>
+                    <p class="card-text" style="font-size: 0.94em;">Hogwarts Legacy es un juego de rol inmersivo en mundo abierto que se inspira de los libros de la saga Harry Potter. Disfruta del Hogwarts del siglo XIX. Tu personaje es un alumno del famoso colegio que tiene la clave de un secreto que amenaza con destruir el mundo mágico.</p>
+                    <p class="price">60€</p>
+                    <button type="button" class="btn btn-purple h-100" data-bs-toggle="modal" data-bs-target="#mimodal4">Ver mas</button>
+                    <button class="addtocart btn btn-cyan h-100">Comprar</button>
+                    </div>
+                    <!--MODAL-->
+                    <div class="modal fade" id="mimodal4">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <!--Cabezera del dialogo-->
+                                    <div class="modal-header">
+                                    <h4 class="modal-title">Cabecera</h4>
+                                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+    
+                                <!--Cuerpo del dialogo-->
+                                    <div class="modal-body">
+                                        <p>
+                                            Hogwarts Legacy es un RPG de acción en un mundo abierto ambientado en el universo de los libros de Harry Potter. Embárcate en un viaje que te llevará a lugares nuevos y ya conocidos, y en el que podrás descubrir animales fantásticos, personalizar a tu personaje, elaborar pociones, dominar hechizos, mejorar tus habilidades y convertirte en la bruja o el mago que quieras ser.
+
+Disfruta de Hogwarts en el siglo XIX. Tu personaje es un estudiante que tiene la clave de un antiguo secreto que amenaza la estabilidad del mundo mágico. Consigue aliados, enfréntate a magos tenebrosos y decide el destino del mundo mágico. Tú defines tu legado. Escribe tu propia historia.
+                                        </p>
+                                    </div>
+    
+                                <!--Pie del dialogo-->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 border-top"><!--Footer-->
+            <div class="col-4 mt-5"><!--Contacto-->
+                <h4>Contacto</h4>
+                <ul class="mt-4">
+                    <li style="color: white;">Carr. de Guadarrama, 85, 28260 Galapagar, Madrid</li>
+                    <li style="color: white;">Email de contacto: Informacion@Grafik.com</li>
+                    <li style="color: white;">Telefono: 123456789</li>
+                </ul>
+            </div>
+
+            <div class="col-4 mt-5"><!--Info-->
+                <h4>Informacion de Nuestra Empresa</h4>
+                <ul>
+                    <li style="color: white;">Acerca De:</li>
+                    <li style="color: white;">Poltica De Privacidad</li>
+                    <li style="color: white;">AActualizaciones de la Pagina</li>
+                </ul>
+
+            </div>
+
+            <div class="col-4 mt-5"><!--Redes Sociales-->
+                <h4>Redes Sociales</h4>
+                <ul class="mt-4">
+                    <li style="color: white;">Instagram</li>
+                    <li style="color: white;">Twitter</li>
+                    <li style="color: white;">Tik Tok</li>
+                    <li style="color: white;">Facebook</li>
+                </ul>
+            </div>
+        </div>    
+        <div class="row mt-5 border-top border-bottom">
+            <div class="col-2 mt-3 mb-3">
+                <img class="img" src="imgs/grafik Presentacion.png" alt="Logo Grafik">
+            </div>
+            <div class="col-10 mt-3 mb-3">
+                <h6 style="color: white; background-color: black;">© 2023 Grafik S.L. Todos los derechos reservados. Todas las marcas registradas pertenecen a sus respectivos dueños en España y otros países.
+                    Todos los precios incluyen IVA (donde sea aplicable).</h4>
+            </div>
+        </div>
+    </div>
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/carrito.js"></script>
+  </body>
+</html>
