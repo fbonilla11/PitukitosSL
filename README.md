@@ -15,7 +15,10 @@ Además se pedían unas ciertas restricciones las cuales son las siguientes:
   - El país debe de ser un selector.
 
 
-#
+
+
+
+
 
 # CARACTERÍSTICAS DEL CARRITO DE COMPRA
 
