@@ -14,12 +14,6 @@ Además se pedían unas ciertas restricciones las cuales son las siguientes:
   - La contraseña tenga al menos ocho caracteres, al menos una letra minúscula, una mayúscula, un número y un símbolo.
   - El país debe de ser un selector.
 
-
-
-
-
-
-
 # CARACTERÍSTICAS DEL CARRITO DE COMPRA
 
 - La página debe constar de una galería de productos/servicios
